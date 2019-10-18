@@ -28,10 +28,33 @@ Workshop de Redes Neuronales usando Watson Studio para la UNAM FES Acatlan (*19 
 * [IBM Watson Machine Learning Service](https://cloud.ibm.com/catalog/services/machine-learning) - Servicio usado para calcular gráficas
 * [Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage) - Servicio usado para subir una base de datos no estructurada (noSQL)
 
+Si ya tienen esas herramientas creadas, lo puedes visualizar en su [Lista de recursos > Servicios (Studio y ML) || > Almacenamiento (Object Storage)](https://cloud.ibm.com/resources)
+
+![1](Screenshots/1.png)
 
 ## Comenzamos
 
+Para comenzar a realizar la practica, debemos de tener en nuestra cuenta los 3 servicios IBM, para encontrarlos vamos a [Catálogo](https://cloud.ibm.com/catalog):
 
+![2](Screenshots/2.png)
+
+![3](Screenshots/3.png)
+
+Como recomendación, podremos dejar por default al crear los servicios, damos en el boton Crear
+
+![4](Screenshots/4.png)
+
+![5](Screenshots/5.png)
+
+Una vez creado los 3 servicios, podremos dar comienzo a la practica, podremos consltar a nuestra [Lista de recursos](https://cloud.ibm.com/resources).
+
+### Carga de datos
+
+Vamos en el servicio de Cloud Object Storage, donde vamos a crear 2 depositos, uno para almacenar datos de entrenamiento y otro para almacenar resultados de entrenamiento.
+
+![6](Screenshots/6.png)
+
+![7](Screenshots/7.png)
 
 ## Autores
 
