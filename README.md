@@ -15,7 +15,7 @@ Construcción una red neuronal para reconocer dígitos escritos a mano utilizand
 Entrenar un modelo de aprendizaje profundo para reconocer dígitos escritos a mano.
 
 ### Objetivos especificos
-* Diseñar una red neuronal convolucional (CNN) con una capa convolucional usando el editor de flujo en IBM Watson Studio, para lo cual entrenará, implementará y probará el modelo usando el generador de experimentos en Watson Studio.
+* Diseñar una [red neuronal convolucional](https://es.wikipedia.org/wiki/Redes_neuronales_convolucionales) (CNN) con una capa convolucional usando el editor de flujo en IBM Watson Studio, para lo cual entrenará, implementará y probará el modelo usando el generador de experimentos en Watson Studio.
 
 ## MNIST
 
@@ -62,7 +62,7 @@ Como recomendación, podremos dejar por default al crear los servicios, damos en
 
 ![5](Screenshots/5.png)
 
-Una vez creado los 3 servicios, podremos dar comienzo a la practica, podremos consltar a nuestra [Lista de recursos](https://cloud.ibm.com/resources).
+Una vez creado los 3 servicios, podremos dar comienzo a la practica, podremos consultar a nuestra [Lista de recursos](https://cloud.ibm.com/resources).
 
 ### Carga de datos
 
@@ -92,9 +92,33 @@ Puedes agregar ya sea arrastrar los archivos o subirlos manualmente en el boton 
 
 ![10](Screenshots/10.png)
 
-Esperamos a que termine de cargar los dataset (50 MB / 10 minutos aprox.) y ya quedaría este paso.
+Esperamos a que termine de cargar los dataset (50 MB / 15 minutos aprox.) y ya quedaría este paso.
 
+![11](Screenshots/11.png)
 
+### Creación de una red neuronal
+
+En este tutorial demuestra cómo puede crear un diseño de red neuronal basado en una muestra en la interfaz de usuario del editor de flujo.
+
+Vamos a nuestro servicio Watson Studio y daremos clic en "Get Started"
+
+![12](Screenshots/12.png)
+
+Una vez dentro de Watson Studio, vamos a crear un proyecto, dando clic en "":
+
+![13](Screenshots/13.png)
+
+![14](Screenshots/14.png)
+
+![15](Screenshots/15.png)
+
+![16](Screenshots/16.png)
+
+Una vez dentro del proyecto, vamos a dar clic en "Add to project" y seleccionamos "Model Flow"
+
+![17](Screenshots/17.png)
+
+![18](Screenshots/18.png)
 
 ## Autores
 
