@@ -8,6 +8,22 @@ Workshop de Redes Neuronales usando Watson Studio para la UNAM FES Acatlan (*19 
 
 ![mapa](https://developer.ibm.com/developer/articles/introduction-watson-studio/images/02.3-Watson-Studio-Architecture.png)
 
+## Práctica
+Construcción una red neuronal para reconocer dígitos escritos a mano utilizando el conjunto de datos MNIST
+
+## Objetivo general
+Entrenar un modelo de aprendizaje profundo para reconocer dígitos escritos a mano.
+
+### Objetivos especificos
+* Diseñar una red neuronal convolucional (CNN) con una capa convolucional usando el editor de flujo en IBM Watson Studio, para lo cual entrenará, implementará y probará el modelo usando el generador de experimentos en Watson Studio.
+
+## MNIST
+
+La base de datos MNIST es una gran base de datos de dígitos escritos a mano que se usa comúnmente para capacitar a varios sistemas de procesamiento de imágenes. La base de datos también se usa ampliamente para capacitación y pruebas en el campo del aprendizaje automático.
+![Practica](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
+
+
+
 ## Prerequisitos
 
 * [Cuenta IBM Cloud](https://cloud.ibm.com/) para crear una cuenta, se detalla en el manual:
@@ -54,7 +70,31 @@ Vamos en el servicio de Cloud Object Storage, donde vamos a crear 2 depositos, u
 
 ![6](Screenshots/6.png)
 
+Una vez creado el deposito, creamos otro, para ello, navegaremos a "Getting started" y en "Creating buckets" y damos en el botón "Crear depodito":
+
+![6.1](Screenshots/6.1.png)
+
 ![7](Screenshots/7.png)
+
+Una vez creados, vamos en la sección de "Bucket" y veremos los 2 depositos creados:
+
+![8](Screenshots/8.png)
+
+Accederemos a nuestro deposito de entrenamiento, y ahí agregaremos los 3 dataset:
+
+    * mnist-keras-train.pkl
+    * mnist-keras-validate.pkl
+    * mnist-keras-test.pkl
+
+Puedes agregar ya sea arrastrar los archivos o subirlos manualmente en el boton "Subir":
+
+![9](Screenshots/9.png)
+
+![10](Screenshots/10.png)
+
+Esperamos a que termine de cargar los dataset (50 MB / 10 minutos aprox.) y ya quedaría este paso.
+
+
 
 ## Autores
 
