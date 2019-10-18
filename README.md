@@ -15,7 +15,8 @@ Construcción una red neuronal para reconocer dígitos escritos a mano utilizand
 Entrenar un modelo de aprendizaje profundo para reconocer dígitos escritos a mano.
 
 ### Objetivos especificos
-* Diseñar una [red neuronal convolucional](https://es.wikipedia.org/wiki/Redes_neuronales_convolucionales) (CNN) con una capa convolucional usando el editor de flujo en IBM Watson Studio, para lo cual entrenará, implementará y probará el modelo usando el generador de experimentos en Watson Studio.
+* Diseñar una [red neuronal convolucional](https://es.wikipedia.org/wiki/Redes_neuronales_convolucionales) (CNN) con una capa convolucional usando el editor de flujo en IBM Watson Studio.
+* Entrenar, implementar y probar el modelo usando el generador de experimentos en Watson Studio.
 
 ## MNIST
 
@@ -31,7 +32,7 @@ La base de datos MNIST es una gran base de datos de dígitos escritos a mano que
 * [Código IBM Cloud](https://my15.digitalexperience.ibm.com/b73a5759-c6a6-4033-ab6b-d9d4f9a6d65b/dxsites/151914d1-03d2-48fe-97d9-d21166848e65/technology/cloud) para generar código de estudiante, se detalla en el manual:
     * [Cómo generar código](https://github.com/fatalityignpab/Workshop-Redes-Neuronales/blob/master/1.%20Academic%20Initiative%20-%20Requesting%20an%20IBM%20Cloud%20Promo%20Code%20(new%20version).pdf) (Solo para Estudiantes o Facultades)
     * [Aplicar código a mi cuenta](https://github.com/fatalityignpab/Workshop-Redes-Neuronales/blob/master/3.%20Academic%20Initiative%20-%20Applying%20an%20IBM%20Cloud%20Promo%20Code.pdf)
-* Dataset (Se encuentra en este respositorio)
+* Datos de entrenamiento (Se encuentra en este respositorio, sirve para que la red neuronal pueda ser entrenada con esos datos)
     * mnist-keras-train.pkl
     * mnist-keras-validate.pkl
     * mnist-keras-test.pkl
@@ -80,7 +81,7 @@ Una vez creados, vamos en la sección de "Bucket" y veremos los 2 depositos crea
 
 ![8](Screenshots/8.png)
 
-Accederemos a nuestro deposito de entrenamiento, y ahí agregaremos los 3 dataset:
+Accederemos a nuestro deposito de entrenamiento, y ahí agregaremos los 3 datos de entrenamiento:
 
     * mnist-keras-train.pkl
     * mnist-keras-validate.pkl
@@ -114,11 +115,19 @@ Una vez dentro de Watson Studio, vamos a crear un proyecto, dando clic en "":
 
 ![16](Screenshots/16.png)
 
-Una vez dentro del proyecto, vamos a dar clic en "Add to project" y seleccionamos "Model Flow"
+Una vez dentro del proyecto, vamos a dar clic en "Add to project" y seleccionamos "Modeler Flow":
 
 ![17](Screenshots/17.png)
 
 ![18](Screenshots/18.png)
+
+Una vez dentro, vamos a darle "From Example" y seleccionaremos "Single Convolution layer on MNIST" y damos clic en el botón "Create" (Si no les aparece el modelo, intentelo en Modo Incognito):
+
+![19](Screenshots/19.png)
+
+Dentro del modelo, veremos ya prehecho una red neuronal (ver más en [Nodos para Red Neuronal en watson](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-canvas-nnd-nodes.html))
+
+![20](Screenshots/20.png)
 
 ## Autores
 
