@@ -31,7 +31,7 @@ Workshop de Redes Neuronales usando Watson Studio para la UNAM FES Acatlan (*19 
 
 ## Comenzamos
 
-[Tutorial (en Inglés)](https://github.com/r4gm/predict-opioid-prescribers)
+
 
 ## Autores
 
