@@ -166,39 +166,39 @@ Damos las propiedades como:
 * En el menú desplegable **Test data file**, seleccione "mnist-keras-test.pkl".
 * En el menú desplegable **Validation data file**, seleccione "mnist-keras-validate.pkl".
 
-![24](Screenshots/24.png)
+![24](Screenshots/24.PNG)
 
 Una vez configurado el nodo, vamos a almacenar el diseño de la red neuronal como una definición de entrenamiento, para eso, vamos a darle en el icono "Publish"
 
-![25](Screenshots/25.png)
+![25](Screenshots/25.PNG)
 
 Le damos nombre al modelo, pueden darle nombre y descripción, en la parte de "Select WML Instance" debemos de asociar al servicio de Machine Learning creado anteriormente en este tutorial, seleccionamos el servicio de ML y se entrenará el modelo:
 
-![26](Screenshots/26.png)
+![26](Screenshots/26.PNG)
 
 **Nota:** Puede descargar el código de construcción de modelos de acuerdo a los sistemas que pueda usar en sus proyectos:
 
-![27](Screenshots/27.png)
+![27](Screenshots/27.PNG)
 
 ## Entrena el modelo con un generador de experimentos
 
 Vamos a entrenar nuestro modelo que creamos en un generador de experimentos, debemos de estar en la pantalla principal de nuestro proyecto, en la sección "Asset" damos clic en "New deep learning experiment":
 
-![28](Screenshots/28.png)
+![28](Screenshots/28.PNG)
 
 Se nos abrirá una pantalla donde debemos de dar nombre al experimento y descripción, seleccionamos nuestro servicio Machine Learning y ahora, debemos de configurar nuestros datos de entrenamiento y dato de resultados que ya creamos previamente en este tutorial, damos clic en la parte de "Cloud Object Storage bucket for storing training data files" "Select".
 
-![29](Screenshots/29.png)
+![29](Screenshots/29.PNG)
 
 Nos abríra una ventana donde debemos de especificar a donde está almacenado nuestros datos de entrenamiento, donde especificamos nuestra conexión que hicimos en la parte del modelo, y a que almacenamiento usamos para el entrenamiento donde lo usamos en el modelo, luego damos "Select":
 
-![30](Screenshots/30.png)
+![30](Screenshots/30.PNG)
 
 Al igual haremos lo mismo en el almacenamiento de resultados, donde especificaremos la conexión que usamos en el modelo, pero en el depósito seleccionaremos donde van a arrojar los resultados.
 
-![31](Screenshots/31.png)
+![31](Screenshots/31.PNG)
 
-![32](Screenshots/32.png)
+![32](Screenshots/32.PNG)
 
 Ahora vamos a asignar un modelo de entrenamiento
 
