@@ -176,7 +176,10 @@ Le damos nombre al modelo, pueden darle nombre y descripción, en la parte de "S
 
 ![26](Screenshots/26.PNG)
 
+![26.1](Screenshots/26.1.PNG)
+
 **Nota:** Puede descargar el código de construcción de modelos de acuerdo a los sistemas que pueda usar en sus proyectos:
+**Nota 2:** Sería recomendable tener el 
 
 ![27](Screenshots/27.PNG)
 
@@ -200,7 +203,15 @@ Al igual haremos lo mismo en el almacenamiento de resultados, donde especificare
 
 ![32](Screenshots/32.PNG)
 
-Ahora vamos a asignar un modelo de entrenamiento
+Ahora vamos a asignar el modelo de entrenamiento que creamos (Red neuronal), en el "Associate training definitions" damos clic en "Add training definition", sí en "Existing training definition" no aparece nuestro modelo, tendríamos que añadir manualmente nuestro código de modelo que descargamos previamente, en "New training definition" le damos nombre a nuestro modelo, arrastramos el archivo que generó el modelo de Red neuronal, en "Computer configuration", seleccione "1/2 x NVIDIA Tesla K80 (1 GPU)", clic el botón "Create":
+
+![32.1](Screenshots/32.1.PNG)
+
+![33](Screenshots/33.PNG)
+
+Al final daremos "Create and run":
+
+![34](Screenshots/34.PNG)
 
 ## Autores
 
