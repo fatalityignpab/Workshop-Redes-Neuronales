@@ -67,11 +67,11 @@ Una vez creado los 3 servicios, podremos dar comienzo a la practica, podremos co
 
 ### Carga de datos
 
-Vamos en el servicio de Cloud Object Storage, donde vamos a crear 2 depositos, uno para almacenar datos de entrenamiento y otro para almacenar resultados de entrenamiento.
+Vamos en el servicio de Cloud Object Storage, donde vamos a crear 2 depositos, uno para almacenar datos de entrenamiento y otro para almacenar resultados de entrenamiento, pueden escribir como default datos-entrenamiento, en la Resiliencia deben de poner Interregional y en la ubicación us-geo (se debe de poner ese ya que el modelo agarrará los datos compatibles en cualquier región), luego dar en "Crear depósito":
 
 ![6](Screenshots/6.png)
 
-Una vez creado el deposito, creamos otro, para ello, navegaremos a "Getting started" y en "Creating buckets" y damos en el botón "Crear depodito":
+Una vez creado el deposito, creamos otro, para ello, navegaremos a "Getting started" y en "Creating buckets" y damos en el botón "Crear depósito":
 
 ![6.1](Screenshots/6.1.png)
 
@@ -115,6 +115,26 @@ Una vez dentro de Watson Studio, vamos a crear un proyecto, dando clic en "":
 
 ![16](Screenshots/16.png)
 
+### Ajuste del servicio Machine Learning
+
+Antes de crear el modelo, debemos de asociar el servicio Machine Learning previamente levantado, para eso, vamos a la opción "Settings":
+
+![16.1](Screenshots/16.1.png)
+
+Vamos en la sección de "Associated services", damos clic en "Add service > Watson"
+
+![16.2](Screenshots/16.2.png)
+
+![16.3](Screenshots/16.3.png)
+
+Seleccionamos el servicio de "Machine Learning" con "Add", nos efocamos a "Existing", seleccionamos el servicio Machine Learning que hemos creado y dar "Select":
+
+![16.4](Screenshots/16.4.png)
+
+![16.5](Screenshots/16.5.png)
+
+### Creación de una red neuronal
+
 Una vez dentro del proyecto, vamos a dar clic en "Add to project" y seleccionamos "Modeler Flow":
 
 ![17](Screenshots/17.png)
@@ -125,9 +145,62 @@ Una vez dentro, vamos a darle "From Example" y seleccionaremos "Single Convoluti
 
 ![19](Screenshots/19.png)
 
-Dentro del modelo, veremos ya prehecho una red neuronal (ver más en [Nodos para Red Neuronal en watson](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-canvas-nnd-nodes.html))
+Dentro del modelo, veremos ya prehecho una red neuronal (ver más en [Nodos para Red Neuronal en Watson](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-canvas-nnd-nodes.html))
 
 ![20](Screenshots/20.png)
+
+### Actualizar datos del modelo
+
+Una vez dentro del modelo, hay que actualizar el primer nodo para especificar cómo leer los datos de entrenamiento, prueba y validación dando doble clic en ese nodo, donde se desplegará un menú lateral para la configuración:
+
+![21](Screenshots/21.png)
+
+Ahora le damos un nombre a la conexión y clic en el botón "Create a connection", una vez creado, desplegamos la conexión que creamos, seleccionamos el deposito donde añadimos los datos de entrenamiento:
+
+![22](Screenshots/22.png)
+
+![23](Screenshots/23.png)
+
+Damos las propiedades como:
+* En el menú desplegable **Train data file**, seleccione "mnist-keras-train.pkl".
+* En el menú desplegable **Test data file**, seleccione "mnist-keras-test.pkl".
+* En el menú desplegable **Validation data file**, seleccione "mnist-keras-validate.pkl".
+
+![24](Screenshots/24.png)
+
+Una vez configurado el nodo, vamos a almacenar el diseño de la red neuronal como una definición de entrenamiento, para eso, vamos a darle en el icono "Publish"
+
+![25](Screenshots/25.png)
+
+Le damos nombre al modelo, pueden darle nombre y descripción, en la parte de "Select WML Instance" debemos de asociar al servicio de Machine Learning creado anteriormente en este tutorial, seleccionamos el servicio de ML y se entrenará el modelo:
+
+![26](Screenshots/26.png)
+
+**Nota:** Puede descargar el código de construcción de modelos de acuerdo a los sistemas que pueda usar en sus proyectos:
+
+![27](Screenshots/27.png)
+
+## Entrena el modelo con un generador de experimentos
+
+Vamos a entrenar nuestro modelo que creamos en un generador de experimentos, debemos de estar en la pantalla principal de nuestro proyecto, en la sección "Asset" damos clic en "New deep learning experiment":
+
+![28](Screenshots/28.png)
+
+Se nos abrirá una pantalla donde debemos de dar nombre al experimento y descripción, seleccionamos nuestro servicio Machine Learning y ahora, debemos de configurar nuestros datos de entrenamiento y dato de resultados que ya creamos previamente en este tutorial, damos clic en la parte de "Cloud Object Storage bucket for storing training data files" "Select".
+
+![29](Screenshots/29.png)
+
+Nos abríra una ventana donde debemos de especificar a donde está almacenado nuestros datos de entrenamiento, donde especificamos nuestra conexión que hicimos en la parte del modelo, y a que almacenamiento usamos para el entrenamiento donde lo usamos en el modelo, luego damos "Select":
+
+![30](Screenshots/30.png)
+
+Al igual haremos lo mismo en el almacenamiento de resultados, donde especificaremos la conexión que usamos en el modelo, pero en el depósito seleccionaremos donde van a arrojar los resultados.
+
+![31](Screenshots/31.png)
+
+![32](Screenshots/32.png)
+
+Ahora vamos a asignar un modelo de entrenamiento
 
 ## Autores
 
